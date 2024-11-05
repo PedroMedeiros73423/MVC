@@ -5,13 +5,14 @@
 
 package principal;
 
-/**
- *
- * @author unisul
- */
-public class Principal {
+import visao.FrmMenuPrincipal;
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+
+
+public class Principal {
+public static void main(String[] args) {
+    FrmMenuPrincipal objetotela = new FrmMenuPrincipal(); // Instancia a interface gráfica
+objetotela.setVisible(true); // Torna a janela visível
 }
+}
+
