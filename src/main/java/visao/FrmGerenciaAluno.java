@@ -161,9 +161,7 @@ public class FrmGerenciaAluno extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(JBApagar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 810, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,7 +204,37 @@ public class FrmGerenciaAluno extends javax.swing.JFrame {
     }//GEN-LAST:event_JTFIdadeActionPerformed
 
     private void JBAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBAlterarActionPerformed
-        // TODO add your handling code here:
+        try {
+        // recebendo e validando dados da interface gráfica.
+        int id = 0;
+        String nome = "";
+        int idade = 0;
+        String curso = "";
+        int fase = 0;
+        if (this.JTFNome.getText().length() < 2) {
+        throw new Mensagem("Nome deve conter ao menos 2 caracteres.");
+        } else {
+        nome = this.JTFNome.getText();
+        }
+        if (this.JTFIdade.getText().length() <= 0) {
+        throw new Mensagem("Idade deve ser número e maior que zero.");
+        } else {
+        idade = Integer.parseInt(this.JTFIdade.getText());
+        }
+        if (this.JTFCurso.getText().length() < 2) {
+        throw new Mensagem("Curso deve conter ao menos 2 caracteres.");
+        } else {
+        curso = this.JTFCurso.getText();
+        }
+        if (this.JTFFase.getText().length() <= 0) {
+        throw new Mensagem("Fase deve ser número e maior que zero.");
+        } else {
+        fase = Integer.parseInt(this.JTFFase.getText());
+        }
+
+
+
+        
     }//GEN-LAST:event_JBAlterarActionPerformed
 
     private void JBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCancelarActionPerformed
